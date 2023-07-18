@@ -1,0 +1,25 @@
+.storybook-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    border: 0;
+    display: inline-block;
+    line-height: 1;
+}
+.storybook-typography--h1 {
+    font-size: 26px;
+}
+.storybook-typography--h2 {
+    font-size: 24px;
+}
+.storybook-typography--h3 {
+    font-size: 22px;
+}
+.storybook-typography--h4 {
+    font-size: 20px;
+}
+.storybook-typography--h5 {
+    font-size: 18px;
+}
+.storybook-typography--h6 {
+    font-size: 16px;
+} 

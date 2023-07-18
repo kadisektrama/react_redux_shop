@@ -1,0 +1,29 @@
+.cell {
+    cursor: pointer;
+    border-radius: 24px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:hover {
+    background-color: rgb(182, 182, 162);
+}
+
+.selected-cell {
+    background-color: rgb(122, 122, 110);
+}
+
+.selected-cell-small {
+    font-size: 13px;
+}
+
+.selected-cell-medium {
+    font-size: 16px;
+}
+
+.selected-cell-big {
+    font-size: 19px;
+}
