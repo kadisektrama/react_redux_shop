@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { useForm, Controller } from 'react-hook-form'
 
 import { UserOutlined } from '@ant-design/icons'
-
 import { Form, Input, Button, Checkbox } from 'antd'
+
 import { TLogin } from '../../../types/types'
+import './login.scss'
+
 const FormItem = Form.Item
 
 type TMapDispatchToProps = {
@@ -25,6 +27,8 @@ const login: React.FC<TMapDispatchToProps> = (props) => {
             style={{ width: '500px' }}
             onFinish={onSubmit}
         >
+            <div className="login_header">Sign in</div>
+
             <FormItem>
                 <Controller
                     name="user_name"

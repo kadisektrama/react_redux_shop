@@ -17,7 +17,7 @@ const layout = () => {
                 <Header />
             </header>
             <main className='main-flex'>
-                <div className='content'>
+                <div className='content-auth'>
                     <ErrorBoundary>
                         <Suspense fallback={<SimpleLoader />}>
                             <Outlet />

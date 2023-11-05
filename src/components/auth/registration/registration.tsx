@@ -6,6 +6,8 @@ import { UserOutlined } from '@ant-design/icons'
 import { Form, Input, Button, Checkbox } from 'antd'
 
 import { TRegistration } from '../../../types/types'
+import "./registration.scss"
+
 const FormItem = Form.Item
 
 type TMapDispatchToProps = {
@@ -25,6 +27,8 @@ const registration: React.FC<TMapDispatchToProps> = (props) => {
             style={{ width: '500px' }}
             onFinish={onSubmit}
         >
+            <div className="registration_header">Sign up</div>
+
             <FormItem>
                 <Controller
                     name="user_name"
@@ -100,13 +104,12 @@ const registration: React.FC<TMapDispatchToProps> = (props) => {
             <FormItem>
                 <div className='flex-justify-content-space-between'>
                     <Checkbox>Remember me</Checkbox>
-                    <a className="login-form-forgot" href="">Forgot password</a>
                 </div>
                 <div className='flex-justify-content-space-between'>
                     <Button type="primary" htmlType="submit" className="login-form-button">
-                        Log in
+                        Sign up
                     </Button>
-                    <span>Or <Link to={'/auth/registration'}>register now!</Link></span>
+                    <span>Or <Link to={'/auth/login'}>login!</Link></span>
                 </div>
             </FormItem>
         </Form>

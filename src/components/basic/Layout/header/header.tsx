@@ -47,16 +47,11 @@ const header: React.FC<TMapStateToProps> = (props) => {
         <div style={{ display: 'flex', height: '64px', alignItems: 'center', margin: '0 30px 0 30px' }}>
             <Link to={'/'}><span style={{ fontSize: '30px' }} >SLAANESh</span></Link>
 
-            <div className='flex-justify-content-space-between' style={{ width: '100%', margin: 0 }}>
-                <Space size={10} style={{ marginLeft: '50px' }}>
-                    <Link to={'/categories'}><Button type="text">catalog</Button></Link>
-                    <span>search</span>
-                </Space>
-
+            <div className='flex-justify-content-flex-end' style={{ width: '100%', margin: 0 }}>
                 <div>
                     {cookies.token ? (
                         <>
-                            {props.user?.data?.role?.name === 'admin' && <Link style={{ marginRight: '24px' }} to={'/admin'}><Button type="text">admin</Button></Link>}
+                            {props.user?.data?.role?.name === 'admin' && <Button style={{ marginRight: '24px' }} type="text"><Link to={'/admin'}>admin</Link></Button>}
                             <Link style={{ marginRight: '24px' }} to={'/host'}><Button type="text">manage</Button></Link>
 
                             <Dropdown menu={{ items }} trigger={['click']}>
@@ -64,7 +59,9 @@ const header: React.FC<TMapStateToProps> = (props) => {
                             </Dropdown>
                         </>
                     ) : (
-                        <Link to={'/auth/login'}>login</Link>
+                        <Button type="text">
+                            <Link to={'/auth/login'}>login</Link>
+                        </Button>
                     )}
                 </div>
             </div>

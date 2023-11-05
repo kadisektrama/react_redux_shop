@@ -12,7 +12,7 @@ type MapPropsType = {
 
 const Products: React.FC<MapPropsType> = (props) => {
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr' }}>
+        <div>
             <Filters />
 
             <div className='recommendation_container'>
